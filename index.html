@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vick Coliving</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-cream: #ede2c6;
+    --bg-cream-dark: #e6d8b8;
+    --text-dark: #2b2b2b;
+    --teal: #2f7d6e;
+    --teal-dark: #1f5c50;
+    --orange: #e0983f;
+    --orange-dark: #c97f2c;
+    --yellow-note: #f6e14d;
+    --green-dash: #3c7a55;
+    --divider: #d8a25a;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    background:#111;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:24px;
+    padding:32px 12px;
+    font-family:'Montserrat', sans-serif;
+  }
+
+  .card{
+    width:100%;
+    max-width:460px;
+    background:var(--bg-cream);
+    border-radius:6px;
+    overflow:hidden;
+  }
+
+  /* ---------- PÁGINA 1 ---------- */
+  .page1{ padding:34px 24px 24px; text-align:center; }
+
+  .logo{
+    font-family:'Dancing Script', cursive;
+    font-weight:700;
+    color:var(--text-dark);
+    line-height:0.95;
+  }
+  .logo .line1{ font-size:40px; display:block; }
+  .logo .line2{ font-size:30px; display:block; margin-top:-6px; }
+
+  .tagline{
+    margin-top:14px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:var(--orange-dark);
+    text-transform:uppercase;
+  }
+
+  .menu{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    text-align:left;
+  }
+
+  .menu h3{
+    font-size:11px;
+    letter-spacing:1px;
+    color:var(--teal-dark);
+    margin-bottom:8px;
+    font-weight:800;
+  }
+
+  .menu a{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    font-size:9.5px;
+    font-weight:700;
+    letter-spacing:0.3px;
+    color:var(--teal);
+    text-decoration:none;
+    margin-bottom:6px;
+  }
+
+  .menu a .lock{ font-size:9px; }
+
+  .divider{
+    margin-top:26px;
+    height:2px;
+    background:var(--divider);
+  }
+
+  .disclaimer{
+    margin-top:8px;
+    font-size:6px;
+    letter-spacing:0.5px;
+    color:#8a8070;
+    text-align:center;
+  }
+
+  /* ---------- PÁGINA 2 ---------- */
+  .page2{ padding:22px 18px 26px; }
+
+  .note-top{
+    background:var(--yellow-note);
+    border-radius:3px;
+    padding:8px 10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:9px;
+    font-weight:700;
+    color:#3a3a1a;
+  }
+  .note-top .dot{
+    width:16px; height:16px; border-radius:50%;
+    background:#c0392b; flex:none;
+  }
+
+  .buttons-row{
+    margin-top:14px;
+    display:grid;
+    grid-template-columns:0.7fr 1.3fr 0.7fr;
+    gap:8px;
+    text-align:center;
+  }
+  .buttons-row .pill{
+    background:var(--orange);
+    color:#fff;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1px;
+    border-radius:10px;
+    padding:5px 6px;
+    margin-bottom:5px;
+  }
+  .buttons-row p{
+    font-size:6.5px;
+    color:var(--text-dark);
+    line-height:1.3;
+  }
+
+  .gallery{
+    margin-top:16px;
+    border:3px dashed var(--green-dash);
+    border-radius:4px;
+    padding:8px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+  }
+  .gallery img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:2px;
+    background:#555;
+    display:block;
+  }
+
+  .bottom-row{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+
+  .note-bottom{
+    background:var(--yellow-note);
+    border-radius:3px;
+    padding:12px 10px;
+    font-size:8px;
+    font-weight:700;
+    color:#3a3a1a;
+    line-height:1.5;
+    position:relative;
+  }
+  .note-bottom .arrow{
+    position:absolute;
+    bottom:8px; right:10px;
+    width:0; height:0;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    border-top:9px solid #c0392b;
+  }
+
+  .info-block h4{
+    font-size:9px;
+    font-weight:800;
+    color:var(--text-dark);
+    margin-bottom:6px;
+  }
+  .info-block p{
+    font-size:7px;
+    color:#555;
+    line-height:1.5;
+  }
+
+  .chest-row{
+    margin-top:10px;
+    display:flex;
+    gap:6px;
+    font-size:14px;
+  }
+
+  .footer-icons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    font-size:18px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PÁGINA 1 -->
+<div class="card page1">
+  <div class="logo">
+    <span class="line1">Vick</span>
+    <span class="line2">coliving</span>
+  </div>
+  <div class="tagline">Aprendendo e Compartilhando</div>
+
+  <div class="menu">
+    <div>
+      <h3>CONSTRUÇÃO</h3>
+      <a href="#"><span class="lock">🔒</span>PORTAS/DOORS</a>
+      <a href="#"><span class="lock">🔒</span>PISOS/FLOORS</a>
+      <a href="#"><span class="lock">🔒</span>PAREDES/WALLS</a>
+    </div>
+    <div>
+      <h3>CAS</h3>
+      <a href="#"><span class="lock">🔒</span>CABELO/HAIR</a>
+      <a href="#"><span class="lock">🔒</span>OLHOS/EYES</a>
+      <a href="#"><span class="lock">🔒</span>ROUPAS/CLOTHES</a>
+    </div>
+    <div>
+      <h3>OBJETOS</h3>
+      <a href="#"><span class="lock">🔒</span>MESAS</a>
+      <a href="#"><span class="lock">🔒</span>BALCÕES</a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="disclaimer">TODO CONTEÚDO É DE USO PESSOAL E NÃO COMERCIAL. CRÉDITOS AOS CRIADORES ORIGINAIS.</div>
+</div>
+
+<!-- PÁGINA 2 -->
+<div class="card page2">
+  <div class="note-top">
+    <div class="dot"></div>
+    <div>ARRASTE PARA O LADO E VEJA MAIS FOTOS</div>
+  </div>
+
+  <div class="buttons-row">
+    <div>
+      <div class="pill">SIM</div>
+      <p>DESCRIÇÃO GERAL, ARRASTE PARA O LADO</p>
+    </div>
+    <div>
+      <div class="pill">DECORAÇÃO</div>
+      <p>VEJA OS DETALHES DA DECORAÇÃO, ARRASTE PARA O LADO E VEJA AS FOTOS</p>
+    </div>
+    <div>
+      <div class="pill">AMBIENTE</div>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- GALERIA: troque o src de cada <img> pelo link direto do Google Drive -->
+  <div class="gallery">
+    <img src="https://drive.google.com/uc?export=view&id=SEU_ID_FOTO_1" alt="Foto 1">
+    <img src="https://drive.google.com/uc?export=view&id=SEU_ID_FOTO_2" alt="Foto 2">
+    <img src="https://drive.google.com/uc?export=view&id=SEU_ID_FOTO_3" alt="Foto 3">
+    <img src="https://drive.google.com/uc?export=view&id=SEU_ID_FOTO_4" alt="Foto 4">
+  </div>
+
+  <div class="bottom-row">
+    <div>
+      <div class="note-bottom">
+        DIRECIONAMENTO PARA O LINK DE DOWNLOAD DESTE AMBIENTE?
+        <div class="arrow"></div>
+      </div>
+      <div class="chest-row">📦📦</div>
+    </div>
+    <div class="info-block">
+      <h4>INFORMAÇÕES</h4>
+      <p>ADICIONE AQUI OS DETALHES DESTE AMBIENTE: ESTILO, ITENS USADOS E LINKS DOS CRIADORES.</p>
+      <p>🔒 CONTEÚDO EXCLUSIVO</p>
+    </div>
+  </div>
+
+  <div class="footer-icons">📄 🔗</div>
+</div>
+
+</body>
+</html>
